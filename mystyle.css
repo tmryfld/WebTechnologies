@@ -1,0 +1,79 @@
+:root {
+    --bs-primary:#eeeeee;
+    --bs-primary-rgb:238, 238, 238;
+    --bs-secondary:#006266;
+    --bs-secondary-rgb:0, 98, 102;
+    --bs-body-bg:#ffffff;
+    --bs-body-bg-rgb:255, 255, 255;
+    --bs-link-color:#2f2f2f;
+    --bs-link-color-rgb:47, 47, 47;
+    --bs-link-hover-color:#006266; 
+    --bs-link-hover-color-rgb:0, 98, 102;
+}
+
+h1, h2 {
+    color: var(--bs-primary);
+    font-weight:600;
+}
+
+html {
+    scroll-padding-top: 3rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    position:relative;
+    font-family:Helvetica;
+}
+
+.navbar-brand{
+    font-weight:bolder;
+    font-size:x-large;
+}
+
+.navbar-nav{
+    --bs-nav-link-color: #2f2f2f;
+    --bs-nav-link-color-rgb: 47, 47, 47;
+    --bs-nav-link-hover-color: #006266;
+    --bs-nav-link-hover-color-rgb: 0, 98, 102;
+    --bs-nav-link-font-weight:600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus{
+    text-decoration: underline;
+    text-underline-offset: 0.3em;
+    text-decoration-thickness: 2px;
+}
+
+/* https://www.w3schools.com/cssref/func_invert.php */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.welcome-banner {
+    z-index: inherit;
+    background-color: #006266;
+    color: #eeeeee;
+    text-align: center;
+    font-size: smaller;
+}
+
+.hero-section{
+    padding: 5rem;
+    color: #ffffff;
+    background: linear-gradient( 135deg, #006266, #003032 );
+    --bs-gutter-x: 2rem;
+    --bs-gutter-y: 2rem;
+}
+
+.btn-tom{
+    background-color: #006266;
+    color: #eeeeee;
+}
+
+.btn-tom:hover{
+    background-color: #2f2f2f;
+    color: #eeeeee;
+}
