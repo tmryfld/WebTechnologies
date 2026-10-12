@@ -1,148 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Document setup, page title, link to stylesheet, bootstrap, externals -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A portfolio website for Tom Rayfield Photography demonstrating responsive design and accessibility.">
-    <title>Tom Rayfield Photography</title>
+    <title>Tom Rayfield Photography | Architecture</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="mystyle.css" rel="stylesheet">
-
 </head>
 
+
 <body>
-
-    <!-- Welcome banner to add colour to web-app -->
-    <p class="welcome-banner mb-0 py-1 px-3">This web-app has been created for the Web Technologies assessment at Sheffield Hallam University.</p>
-    
-    <!-- Navigation bar including logo, brand, web-app links -->
-    <nav class="navbar navbar-expand-lg bg-primary sticky-top" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand" href="index.html" tabindex="1"><img src="Images/TR.png" height="40" width="40"> &nbsp;Tom Rayfield</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="main-nav">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="about.html" tabindex="2">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="architecture.html" tabindex="3">Architecture</a></li>                    
-                    <li class="nav-item"><a class="nav-link" href="margins.html" tabindex="4">Margins</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" tabindex="5">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- used by Return to Top link in footer for accessibility assistance -->
     <header>
+        <!-- Welcome banner to add colour to web-app -->
+        <p id="welcome-banner" class="welcome-banner mb-0 py-1 px-3">This web-app has been created for the Web Technologies assessment at Sheffield Hallam University. <a onclick="closeBanner()" href="#" tabindex="0">[X]</a></p>
+        
+        <!-- Navigation bar including logo, brand, web-app links -->
+        <nav class="navbar navbar-expand-lg bg-primary sticky-top" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" tabindex="0"><img src="Images/TR.png" height="40" width="40" alt="Tom Rayfield logo"> &nbsp;Tom Rayfield</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="main-nav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="about.html" tabindex="0">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="architecture.html" tabindex="0" aria-current="page">Architecture</a></li>                    
+                        <li class="nav-item"><a class="nav-link" href="margins.html" tabindex="0">Margins</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" tabindex="0">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- used by Return to Top link in footer for accessibility assistance -->
         <div class="container" id="top"></div>
+        
+        <!-- hero section used to provide page information and add additional colour -->
+        <!-- outside of main so full-width can be used -->
+        <section class="hero-section">
+            <div class="container my-5">
+                <h1>Architecture</h1>
+                <p>A selection of black and white architecture photos from the archives (2005-2026).
+                <br>This collection was recently published in Docu Magazine as part of a Special Edition series.</p>
+            </div>
+        </section>
     </header>
-
-    <!-- hero section used to provide page information and add additional colour -->
-    <!-- outside of main so full-width can be used -->
-    <section class="hero-section">
-        <div class="container my-5">
-            <h2>Architecture</h2>
-            <p>A selection of black and white architecture photos from the archives (2005-2026).
-            <br>This collection was recently published in Docu Magazine as part of a Special Edition series.</p>
-        </div>
-    </section>
-
+    
+    
     <main class="container">
-
         <!-- additional spacing -->
         <p>&nbsp;</p>
         
         <!-- photo carousel, similar to homepage, but with more images from Architecture project work -->
         <section id="gallery" class="mx-auto my-5">
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="true" aria-label="A selection of architecture photos.">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
+                    <div class="carousel-item active" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/1.jpg" class="object-fit-cover" alt="A black and white photo of the WR Grace building in New York." title="Tom Rayfield - Grace">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/2.jpg" class="object-fit-cover" alt="A black and white photo of Norwich Cathedral at night." title="Tom Rayfield - Norwich Cathedral">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/3.jpg" class="object-fit-cover" alt="A black and white photo of Parisian style housing in Paris, France." title="Tom Rayfield - Parisian">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/4.jpg" class="object-fit-cover" alt="A black and white photo of St Paul's Cathedral in London at night." title="Tom Rayfield - St Paul's">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/5.jpg" class="object-fit-cover" alt="A black and white photo of Dutch style housing in Amsterdam, Netherlands." title="Tom Rayfield - Amsterdam Architecture II">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/6.jpg" class="object-fit-cover" alt="A black and white photo of the Hampton by Hilton hotel in Utrecht, Netherlands." title="Tom Rayfield - Utrecht">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/7.jpg" class="object-fit-cover" alt="A black and white photo of two skyscrapers in Toronto from below." title="Tom Rayfield - Toronto">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/8.jpg" class="object-fit-cover" alt="A black and white photo of the CN Tower on a sunny day in Toronto, Canada." title="Tom Rayfield - CN Tower">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/9.jpg" class="object-fit-cover" alt="A black and white photo of a modern office block in Lisbon, Portugal." title="Tom Rayfield - Lisbon">
                         </div>
                     </div>
-                    <div class="carousel-item" data-bs-interval="5000">
+                    <div class="carousel-item" data-bs-interval="8000">
                         <div class="ratio ratio-16x9">
                             <img src="Images/Architecture/10.jpg" class="object-fit-cover" alt="A black and white photo of the sky bridge in Canary Wharf, London." title="Tom Rayfield - Wharf II">
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" tabindex="6">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev" tabindex="0">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" tabindex="7">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next" tabindex="0">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
          </section>
-
     </main>    
+
 
     <!-- https://bootstrapexamples.com/@omar34/footer-with-social-media-icons -->
     <footer class="bg-primary text-center py-3">
         <div class="container">&copy; 2026 Tom Rayfield 
             &nbsp;|&nbsp;&nbsp;
-            <a href="https://instagram.com/tomrayfphoto" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://instagram.com/tomrayfphoto" target="_blank" aria-label="Instagram (opens in new tab)"><i class="fab fa-instagram"></i></a>
             &nbsp;
-            <a href="https://facebook.com/tomrayfphoto" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://facebook.com/tomrayfphoto" target="_blank" aria-label="Facebook (opens in new tab)"><i class="fab fa-facebook"></i></a>
             &nbsp;
-            <a href="https://behance.net/tomrayfphoto" target="_blank" aria-label="Behance"><i class="fab fa-behance"></i></a>
+            <a href="https://behance.net/tomrayfphoto" target="_blank" aria-label="Behance (opens in new tab)"><i class="fab fa-behance"></i></a>
             &nbsp;|&nbsp;&nbsp;
-            <a class="link-underline link-underline-opacity-0" href="#top" tabindex="8">Return to Top</a>
+            <a href="#top" tabindex="0">Return to Top</a>
         </div>
     </footer>
+
 
     <!-- script assists with bootstrap content for framework -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    
+    <!-- used to hide information banner at the top of the page -->
+    <script>
+        function closeBanner() {
+            document.getElementById("welcome-banner").style.display = "none";
+        }
+    </script>
 
   </body>
 </html>
