@@ -19,6 +19,13 @@ h1 {
     font-size:xx-large;
 }
 
+/* used for sub-titles on contact page */
+h2 {
+    color: var(--bs-secondary);
+    font-weight:600;
+    font-size:x-large;
+}
+
 /* used for return to top link to prevent areas of the web-app being cut off */
 html {
     scroll-padding-top: 3rem;
